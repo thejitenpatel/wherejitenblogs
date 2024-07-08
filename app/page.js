@@ -5,8 +5,8 @@ import Color from "colorjs.io";
 import { sans } from "./fonts";
 
 export const metadata = {
-  title: "overreacted — A blog by Dan Abramov",
-  description: "A personal blog by Dan Abramov",
+  title: "wherejitenblogs — A blog by Jiten Patel",
+  description: "A personal blog by Jiten Patel",
   alternates: {
     types: {
       "application/atom+xml": "https://overreacted.io/atom.xml",
@@ -21,7 +21,7 @@ export async function getPosts() {
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name);
   const fileContents = await Promise.all(
-    dirs.map((dir) => readFile("./public/" + dir + "/index.md", "utf8")),
+    dirs.map((dir) => readFile("./public/" + dir + "/index.md", "utf8"))
   );
   const posts = dirs.map((slug, i) => {
     const fileContent = fileContents[i];

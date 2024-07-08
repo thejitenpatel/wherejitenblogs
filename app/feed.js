@@ -5,8 +5,8 @@ export function generateFeed(posts, metadata) {
 
   const feedOptions = {
     author: {
-      name: "Dan Abramov",
-      email: "dan.abramov@gmail.com",
+      name: "Jiten Patel",
+      email: "thejitenpatel@gmail.com",
       link: site_url,
     },
     description: metadata.description,
@@ -14,7 +14,7 @@ export function generateFeed(posts, metadata) {
     feedLinks: { atom: `${site_url}atom.xml`, rss: `${site_url}rss.xml` },
     generator: "Feed for Node.js",
     id: site_url,
-    image: "https://github.com/gaearon.png",
+    image: "https://github.com/thejitenpatel.png",
     link: site_url,
     title: metadata.title,
   };

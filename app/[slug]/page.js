@@ -26,10 +26,10 @@ export default async function PostPage({ params }) {
   }
   const { content, data } = matter(file);
   const discussUrl = `https://x.com/search?q=${encodeURIComponent(
-    `https://overreacted.io/${params.slug}/`,
+    `https://overreacted.io/${params.slug}/`
   )}`;
   const editUrl = `https://github.com/gaearon/overreacted.io/edit/main/public/${encodeURIComponent(
-    params.slug,
+    params.slug
   )}/index.md`;
   return (
     <article>
@@ -96,7 +96,7 @@ export async function generateMetadata({ params }) {
   const file = await readFile("./public/" + params.slug + "/index.md", "utf8");
   let { data } = matter(file);
   return {
-    title: data.title + " — overreacted",
+    title: data.title + " — wherejitenblogs",
     description: data.spoiler,
   };
 }
