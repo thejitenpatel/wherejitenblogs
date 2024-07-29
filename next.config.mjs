@@ -5,6 +5,7 @@ const nextConfig = {
   /* config options here */
   output: "export",
   trailingSlash: true,
+  distDir: "./dist",
 };
 
-module.exports = nextConfig;
+export default nextConfig;

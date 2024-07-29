@@ -11,7 +11,18 @@ import "./markdown.css";
 
 overnight.colors["editor.background"] = "var(--code-bg)";
 
-export default async function PostPage({ params }) {
+interface PostPageProps {
+  params: {
+    slug: string;
+  };
+}
+
+interface Metadata {
+  title: string;
+  description: string;
+}
+
+export default async function PostPage({ params }: PostPageProps) {
   const filename = "./public/" + params.slug + "/index.md";
   const file = await readFile(filename, "utf8");
   let postComponents = {};

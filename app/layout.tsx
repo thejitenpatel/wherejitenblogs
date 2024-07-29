@@ -4,8 +4,10 @@ import AutoRefresh from "./AutoRefresh";
 import { serif } from "./fonts";
 import "./global.css";
 
-export default function RootLayout({ children }:{
-  children: React.ReactNode
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
 }) {
   return (
     <AutoRefresh>
