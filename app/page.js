@@ -9,8 +9,10 @@ export const metadata = {
   description: "A personal blog by Jiten Patel",
   alternates: {
     types: {
-      "application/atom+xml": "https://overreacted.io/atom.xml",
-      "application/rss+xml": "https://overreacted.io/rss.xml",
+      "application/atom+xml":
+        "https://thejitenpatel.github.io/wherejitenblogs/atom.xml",
+      "application/rss+xml":
+        "https://thejitenpatel.github.io/wherejitenblogs/rss.xml",
     },
   },
 };

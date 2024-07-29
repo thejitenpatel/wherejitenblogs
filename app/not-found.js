@@ -24,7 +24,7 @@ export default function NotFound() {
         <p>
           If you're looking for translated posts, they're not on the site
           anymore but you can find{" "}
-          <Link href="https://github.com/gaearon/overreacted.io/tree/archive/src/pages">
+          <Link href="https://github.com/thejitenpatel/wherejitenblogs/tree/main/src/pages">
             an archive of them here.
           </Link>
         </p>
