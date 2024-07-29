@@ -5,7 +5,7 @@ import Link from "../Link";
 import { sans } from "../fonts";
 import remarkSmartpants from "remark-smartypants";
 import rehypePrettyCode from "rehype-pretty-code";
-import { remarkMdxEvalCodeBlock } from "./mdx.js";
+import { remarkMdxEvalCodeBlock } from "./mdx.jsx";
 import overnight from "overnight/themes/Overnight-Slumber.json";
 import "./markdown.css";
 

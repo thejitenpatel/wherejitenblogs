@@ -15,7 +15,7 @@ export default function NotFound() {
       </h1>
       <div className="markdown mt-10">
         <p>This page doesn't exist (yet?)</p>
-        <p>
+        {/* <p>
           I recently rewrote the site so maybe something broke. Please{" "}
           <Link href="https://github.com/gaearon/overreacted.io/issues/796">
             complain here.
@@ -28,7 +28,7 @@ export default function NotFound() {
             an archive of them here.
           </Link>
         </p>
-        <p>Hope you'll find what you're looking for.</p>
+        <p>Hope you'll find what you're looking for.</p> */}
       </div>
     </article>
   );

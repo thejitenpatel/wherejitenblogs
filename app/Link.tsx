@@ -1,10 +1,11 @@
 "use client";
 
-import { useTransition } from "react";
+import { HTMLAttributeAnchorTarget, useTransition } from "react";
 import NextLink from "next/link";
 import { useRouter } from "next/navigation";
 
-function isModifiedEvent(event) {
+function isModifiedEvent(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+) {
   const eventTarget = event.currentTarget;
   const target = eventTarget.getAttribute("target");
   return (
@@ -24,17 +25,26 @@ export default function Link({
   href,
   target,
   ...rest
+}: {
+  className?: String,
+    children: React.ReactNode,
+    style?: String,
+    href: String,
+  target?: HTMLAttributeAnchorTarget,
 }) {
   const router = useRouter();
   const [isNavigating, trackNavigation] = useTransition();
-  if (!target && !href.startsWith("/")) {
+
+  console.log(typeof String(href))
+  if (!target && ! href.startsWith("/")) {
     target = "_blank";
   }
+
   return (
     <NextLink
       {...rest}
       target={target}
-      href={href}
+      href={ new URL(`${href}`) }
       onClick={(e) => {
         if (!isModifiedEvent(e)) {
           e.preventDefault();

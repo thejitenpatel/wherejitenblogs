@@ -3,7 +3,9 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-function AutoRefresh({ children }) {
+function AutoRefresh({ children }: {
+  children: React.ReactNode
+} ){
   return children;
 }
 

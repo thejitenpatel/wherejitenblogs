@@ -1,9 +1,9 @@
-import { Feed } from "feed";
+import { Feed, FeedOptions } from "feed";
 
 export function generateFeed(posts, metadata) {
   const site_url = "https://overreacted.io/";
 
-  const feedOptions = {
+  const feedOptions: FeedOptions  = {
     author: {
       name: "Jiten Patel",
       email: "thejitenpatel@gmail.com",
@@ -17,6 +17,7 @@ export function generateFeed(posts, metadata) {
     image: "https://github.com/thejitenpatel.png",
     link: site_url,
     title: metadata.title,
+    copyright: ""
   };
 
   const feed = new Feed(feedOptions);
